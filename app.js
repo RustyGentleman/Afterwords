@@ -62,6 +62,10 @@ document.querySelectorAll('insert').forEach(insert => {
 			console.error(err)
 		})
 })
+document.querySelector('header').querySelectorAll('.dropdown').forEach(dd => {
+	dd.addEventListener('mouseenter', () => dd.classList.add('h'))
+	dd.addEventListener('mouseleave', () => dd.classList.remove('h'))
+})
 //# Consts
 const replacements = {
 	'^\\links([^#<>]+?)$': ['\t<p l>$1</p>', 'gm'],

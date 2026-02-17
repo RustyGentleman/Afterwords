@@ -1,6 +1,6 @@
 # _Ras Silverleaf\nand the world of\nYet Unnamed_
 
-[[Live](https://rassilverleaf.tumblr.com)] [[Dev](https://rustygentleman.github.io/Worldbuilding/)]
+links[[Live](https://rassilverleaf.tumblr.com)] [[Dev](https://rustygentleman.github.io/Worldbuilding/)]
 
 Not just a worldbuilding and writing project, but an entire world I've built inside my head; the apex of my desire and drive to _create_.
 

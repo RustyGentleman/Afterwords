@@ -57,12 +57,12 @@ body > canvas {
   height: 100%;
 }
 
-div[data-inserted] div.block {
+div[data-inserted] div.block, .paper {
   position: relative;
   box-sizing: border-box;
   padding: 40px;
 }
-div[data-inserted] div.block::before {
+div[data-inserted] div.block::before, .paper::before {
   content: "";
   pointer-events: none;
   position: absolute;
@@ -72,6 +72,7 @@ div[data-inserted] div.block::before {
   box-shadow: inset 0 0 3rem 0.7rem #493b2a, inset 0 0 1rem #493b2a;
   filter: url(#paper) blur(0.6px);
 }
+
 div[data-inserted] div.block [tac] {
   width: 100%;
   box-sizing: border-box;
@@ -109,7 +110,9 @@ div.divider {
 }
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 header::before {
   pointer-events: none;
@@ -120,7 +123,33 @@ header::before {
   z-index: -1;
   background-color: #c7c3b8;
   background-image: linear-gradient(to top, #493b2a -10%, transparent, #493b2a 110%);
-  filter: url(#paper2);
+}
+header .dropdown {
+  display: inline-block;
+  position: relative;
+  height: 160%;
+}
+header .dropdown > div.paper {
+  padding: 10px;
+  padding-top: 15px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: auto;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(calc(0.3rem - 100%));
+  transition: ease 0.3s;
+  transition-property: clip-path, transform;
+}
+header .dropdown > div.paper > a {
+  white-space: nowrap;
+}
+header .dropdown > div.paper::before {
+  filter: url(#paper2) blur(0.6px);
+}
+header .dropdown.h div.paper {
+  clip-path: polygon(0% 10px, 100% 10px, 100% 100%, 0% 100%);
+  transform: translateY(calc(0.3rem - 10px));
 }
 
 body > canvas {
@@ -128,12 +157,9 @@ body > canvas {
 }
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: repeating-linear-gradient(to bottom, transparent, transparent 4px, rgba(100, 100, 100, 0.2) 4px, rgba(100, 100, 100, 0.2) 6px), repeating-linear-gradient(to right, transparent, transparent 4px, rgba(100, 100, 100, 0.2) 4px, rgba(100, 100, 100, 0.2) 6px), repeating-linear-gradient(to bottom, transparent, transparent 12px, rgba(100, 100, 100, 0.15) 12px, rgba(100, 100, 100, 0.15) 13px), repeating-linear-gradient(to right, transparent, transparent 12px, rgba(100, 100, 100, 0.15) 12px, rgba(100, 100, 100, 0.15) 13px);
   z-index: -1;
   mix-blend-mode: multiply;
 }/*# sourceMappingURL=app.css.map */
-  mix-blend-mode: multiply;
-}
-/*# sourceMappingURL=app.css.map */
