@@ -101,7 +101,10 @@
 				// 	<div></div>
 				// 	<audio src="/assets/music/${dir}/${file}" controlslist="noplaybackrate nodownload" preload="metadata"></audio>
 				// </div>`)
-				playlist.push(`<div class="block"><span>${file}</span><audio src="/assets/music/${dir}/${file}" controls controlslist="noplaybackrate nodownload" preload="metadata"></audio></div>`)
+				if (location.href.includes('github'))
+					playlist.push(`<div class="block"><span>${file}</span><audio src="/Afterwords/assets/music/${dir}/${file}" controls controlslist="noplaybackrate nodownload" preload="metadata"></audio></div>`)
+				else
+					playlist.push(`<div class="block"><span>${file}</span><audio src="/assets/music/${dir}/${file}" controls controlslist="noplaybackrate nodownload" preload="metadata"></audio></div>`)
 			}
 			btn.parentElement.innerHTML = playlist.join('')
 		}

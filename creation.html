@@ -86,7 +86,10 @@
 				'2025-03-24.jpg',
 			]
 			for (const i in files) {
-				files[i] = `<img src="/assets/drawings/${files[i]}" draggable="false" style="z-index: 0"/>`
+				if (location.href.includes('github'))
+					files[i] = `<img src="/Afterwords/assets/drawings/${files[i]}" draggable="false" style="z-index: 0"/>`
+				else
+					files[i] = `<img src="/assets/drawings/${files[i]}" draggable="false" style="z-index: 0"/>`
 			}
 			console.log(files)
 			g.innerHTML = files.join('')

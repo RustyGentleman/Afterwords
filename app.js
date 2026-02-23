@@ -26,7 +26,10 @@ document.querySelectorAll('insert').forEach(insert => {
 			file = location.pathname.replace(/\/(.+?)\.html/, '$1.md')
 			break
 	}
-	fetch('./mds/' + file)
+	let prefix = ''
+	if (location.href.includes('github'))
+		prefix = '/Afterwords'
+	fetch(prefix + '/mds/' + file)
 		.then(res => {
 			if (!res.ok) throw new Error("Failed to load markdown")
 			return res.text()
@@ -62,6 +65,12 @@ document.querySelectorAll('insert').forEach(insert => {
 		.catch(err => {
 			console.error(err)
 		})
+})
+//# Link fixer
+setTimeout(() => {
+	if (location.href.includes('github'))
+		for (const a of document.querySelectorAll('a'))
+			a.setAttribute('href', '/Afterwords' + a.href)
 })
 //# Consts
 const replacements = {
