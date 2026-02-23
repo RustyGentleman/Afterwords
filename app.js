@@ -23,7 +23,7 @@ document.querySelectorAll('insert').forEach(insert => {
 			file = 'ras.md'
 			break
 		default:
-			file = location.pathname.replace(/\/(.+?)\.html/, '$1.md')
+			file = location.pathname.match(/\/([^/]+?).html$/)[1] + '.md'
 			break
 	}
 	let prefix = ''
