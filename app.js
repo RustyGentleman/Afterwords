@@ -70,7 +70,7 @@ document.querySelectorAll('insert').forEach(insert => {
 setTimeout(() => {
 	if (location.href.includes('github'))
 		for (const a of document.querySelectorAll('a'))
-			a.setAttribute('href', '/Afterwords' + a.href)
+			a.setAttribute('href', '/Afterwords' + a.getAttribute('href'))
 })
 //# Consts
 const replacements = {
