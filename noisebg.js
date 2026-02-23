@@ -218,19 +218,20 @@ resize()
 let zValue = 0
 let timeout
 let lastTime = performance.now()
-window.addEventListener('scroll', () => {
-	if (timeout === undefined) return
-	const delta = performance.now() - lastTime
-	clearTimeout(timeout)
-	go(delta)
-})
+// window.addEventListener('scroll', () => {
+// 	if (timeout === undefined) return
+// 	const delta = performance.now() - lastTime
+// 	clearTimeout(timeout)
+// 	go(delta)
+// })
+
 function go(delta) {
 	let resolution = 10
 	zValue += 4.0 / 60.0 * 1/64 * (delta?? 64)
 	let width = ctx.canvas.width
 	let height = ctx.canvas.height
 	let i = 0
-	const top = document.getElementsByTagName('html')[0].scrollTop/25
+	const top = 0//document.getElementsByTagName('html')[0].scrollTop/25
 	for (let y = top; y < height + top; ++y) {
 		for (let x = 0; x < width; ++x) {
 			let noiseR = quickNoise.noise(x/resolution, y/resolution, 0+zValue)+1
