@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Creation - Afterwords</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+	<script defer src="app.js"></script>
+	<script defer src="noisebg.js"></script>
+	<link rel="stylesheet" href="app.css">
+	<style>
+		.gallery.drawings {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: visible;
+		}
+		.gallery.drawings.active {
+			aspect-ratio: .5;
+			width: 100%;
+			height: auto;
+		}
+		.gallery.drawings img {
+			--x: 0;
+			--y: 0;
+			--ox: 0;
+			--oy: 0;
+			--r: 0;
+			position: absolute;
+			max-width: 20rem;
+			max-height: 20rem;
+			width: auto;
+			height: auto;
+			transform: translate(calc(var(--x) * min(.6vw, 6px) + var(--ox) * 1px), calc(var(--y) * min(.6vw, 6px) + var(--oy) * 1px)) rotate(calc(var(--r) * 1deg));
+			transform-origin: calc(-1% * var(--x)) calc(-1% * var(--y));
+			box-shadow: .2rem .20rem .5rem .1rem rgba(0, 0, 00, .5);
+			cursor: grab
+		}
+	</style>
+	<script>
+		function loadGallery() {
+			const g = document.querySelector('.gallery.drawings')
+			g.classList.add('active')
+			let files = [
+				'2014-03-19.jpg',
+				'2014-08-04.jpg',
+				'2014-08-18.jpg',
+				'2015-03-06-1.jpg',
+				'2015-03-06.jpg',
+				'2015-04-08.jpg',
+				'2015-05-03-1.jpg',
+				'2015-05-03.jpg',
+				'2015-06-12.jpg',
+				'2015-07-10.jpg',
+				'2015-07-23-1.jpg',
+				'2015-07-23.jpg',
+				'2015-07-25.jpg',
+				'2015-08-18.jpg',
+				'2015-08-22.jpg',
+				'2016-03-21-1.jpg',
+				'2016-03-21-2.jpg',
+				'2016-03-21.jpg',
+				'2016-05-05.jpg',
+				'2017-04-24.jpg',
+				'2018-03-24-1.jpg',
+				'2018-03-24.jpg',
+				'2018-10-21.jpg',
+				'2018-10-29.jpg',
+				'2019-03-20.jpg',
+				'2019-03-27.jpg',
+				'2019-07-01.jpg',
+				'2021-01-07.jpg',
+				'2021-01-25-1.jpg',
+				'2021-01-25-2.jpg',
+				'2021-01-25-3.jpg',
+				'2021-01-25-4.jpg',
+				'2021-01-25.jpg',
+				'2023-05-28-1.jpg',
+				'2023-05-28.jpg',
+				'2024-07-20.jpg',
+				'2025-01-04.png',
+				'2025-03-18.jpg',
+				'2025-03-24.jpg',
+			]
+			for (const i in files) {
+				files[i] = `<img src="/assets/drawings/${files[i]}" draggable="false" style="z-index: 0"/>`
+			}
+			console.log(files)
+			g.innerHTML = files.join('')
+			setTimeout(() => {
+				for (const img of g.querySelectorAll('img')) {
+					img.style.setProperty('--x', (Math.random() * 100 - 50).toFixed())
+					img.style.setProperty('--y', (Math.random() * 250 - 125).toFixed())
+					img.style.setProperty('--r', (Math.random() * 20))
+				}
+				let startX, startY, target
+				let topZ = 1
+				let offsetX = 0
+				let offsetY = 0
+				g.addEventListener('mousedown', e => {
+					startX = e.pageX
+					startY = e.pageY
+					target = e.target
+					offsetX = +e.target.style.getPropertyValue(`--ox`)
+					offsetY = +e.target.style.getPropertyValue(`--oy`)
+					target.style.zIndex = ++topZ
+					g.addEventListener('mousemove', move)
+					g.addEventListener('mouseup', () => {
+						g.removeEventListener('mousemove', move)
+						startX = undefined
+						startY = undefined
+					})
+				})
+				function move(e) {
+					const dx = e.pageX - startX
+					const dy = e.pageY - startY
+
+					if (offsetX === undefined) offsetX = 0;
+					if (offsetY === undefined) offsetY = 0;
+					offsetX += dx
+					offsetY += dy
+
+					target.style.setProperty('--ox', offsetX)
+					target.style.setProperty('--oy', offsetY)
+
+					startX = e.pageX
+					startY = e.pageY
+				}
+			})
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="header-inner">
+			<a href="/"><b>A.W.</b></a>
+			|
+			<span class="dropdown">
+				<span><a href="/creation.html">Creation</a></span>
+				<div class="paper">
+					<a href="/ras.html">Worldbuilding</a>
+					<a href="/games.html">Games</a>
+					<a href="/music.html">Music</a>
+				</div>
+			</span>
+			•
+			<span class="dropdown">
+				<span><a href="/tech.html">Tech</a></span>
+				<div class="paper">
+					<a href="/experiments.html">Experiments</a>
+				</div>
+			</span>
+			•
+			<span class="dropdown">
+				<span>Thoughts</span>
+				<span><a href="/tech.html">Tech</a></span>
+				<div class="paper">
+					<a href="/letters.html">Dying thoughts</a>
+				</div>
+			</span>
+		</div>
+	</header>
+	<div class="body-inner">
+		<insert></insert>
+	</div>
+	<canvas></canvas>
+</body>
+<svg>
+	<filter id="paper">
+		<feTurbulence baseFrequency="0.055" numOctaves="4" seed="10" type="fractalNoise" result="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feTurbulence>
+		<feDisplacementMap scale="30" result="ca53054b-8680-4f7f-ae17-d93ca58bb45d" in="SourceGraphic" in2="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feDisplacementMap>
+	</filter>
+	<filter id="paper2">
+		<feTurbulence baseFrequency="0.055" numOctaves="4" seed="10" type="fractalNoise" result="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feTurbulence>
+		<feDisplacementMap scale="5" result="ca53054b-8680-4f7f-ae17-d93ca58bb45d" in="SourceGraphic" in2="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feDisplacementMap>
+	</filter>
+</svg>
+</html>

@@ -39,6 +39,31 @@ body > svg {
   display: none;
 }
 
+button {
+  position: relative;
+  appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+button::before {
+  content: "";
+  position: absolute;
+  inset: -0.5ch;
+  left: -1ch;
+  right: -1ch;
+  pointer-events: none;
+  z-index: -1;
+  background-color: #493b2a;
+  border-radius: 1ch;
+  filter: url(#paper2) blur(0.5px);
+}
+
 .header-inner, .body-inner {
   width: min(100vw, 1000px);
   margin-inline: auto;
@@ -142,6 +167,7 @@ header .dropdown > div.paper {
   transition-property: clip-path, transform;
 }
 header .dropdown > div.paper > a {
+  display: block;
   white-space: nowrap;
 }
 header .dropdown > div.paper::before {
@@ -153,7 +179,10 @@ header .dropdown.h div.paper {
 }
 
 body > canvas {
+  position: fixed;
+  inset: 0;
   filter: contrast(0.8) brightness(0.6) saturate(0) sepia(1);
+  pointer-events: none;
 }
 body::before {
   content: "";

@@ -1,4 +1,15 @@
 //# Generators
+fetch('/')
+	.then(res => {
+		return res.text()
+	})
+	.then(html => {
+		document.querySelector('header').innerHTML = html.match(/<header>([\s\S]*)<\/header>/)[1]
+		document.querySelector('header').querySelectorAll('.dropdown').forEach(dd => {
+			dd.addEventListener('mouseenter', () => dd.classList.add('h'))
+			dd.addEventListener('mouseleave', () => dd.classList.remove('h'))
+		})
+	})
 document.querySelectorAll('insert').forEach(insert => {
 	let file = ''
 	if (insert.dataset.file)
@@ -15,7 +26,7 @@ document.querySelectorAll('insert').forEach(insert => {
 			file = location.pathname.replace(/\/(.+?)\.html/, '$1.md')
 			break
 	}
-	fetch('./' + file)
+	fetch('./mds/' + file)
 		.then(res => {
 			if (!res.ok) throw new Error("Failed to load markdown")
 			return res.text()
@@ -24,24 +35,6 @@ document.querySelectorAll('insert').forEach(insert => {
 			const rendered = renderMD(md)
 			insert.outerHTML = `<div data-inserted="${file}"><div class="block">${rendered}</div></div>`
 			switch (file) {
-				case 'home.md':
-					document.querySelector(`div[data-inserted="${file}"]`).querySelectorAll('h2').forEach((h, i) => {
-						switch(i) {
-							case 0:
-								h.innerHTML = `<a href="/ras.html">${h.innerHTML}</a>`
-								break
-							case 1:
-								h.innerHTML = `<a href="/games.html">${h.innerHTML}</a>`
-								break
-							case 2:
-								h.innerHTML = `<a href="/experiments.html">${h.innerHTML}</a>`
-								break
-							case 3:
-								h.innerHTML = `<a href="/letters.html">${h.innerHTML}</a>`
-								break
-						}
-					})
-					break
 				case 'thoughts.md':
 					document.querySelector(`div[data-inserted="${file}"]`).querySelectorAll('h2').forEach((h, i) => {
 						switch(i) {
@@ -56,15 +49,19 @@ document.querySelectorAll('insert').forEach(insert => {
 						e.outerHTML = `<p l tac>${e.innerHTML}</p>`
 					})
 					break
+				case 'creation.md':
+					document.querySelectorAll('.gallery.drawings, .playlists').forEach(e => {
+						e.parentElement.after(e)
+						const d = document.createElement('div')
+						d.className = 'divider'
+						e.before(d)
+					})
+					break
 			}
 		})
 		.catch(err => {
 			console.error(err)
 		})
-})
-document.querySelector('header').querySelectorAll('.dropdown').forEach(dd => {
-	dd.addEventListener('mouseenter', () => dd.classList.add('h'))
-	dd.addEventListener('mouseleave', () => dd.classList.remove('h'))
 })
 //# Consts
 const replacements = {

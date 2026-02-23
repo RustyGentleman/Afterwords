@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Music - Afterwords</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+	<script defer src="app.js"></script>
+	<script defer src="noisebg.js"></script>
+	<script>
+		const files = {
+			og: [
+				'titris.mp3',
+				'incantation.mp3',
+				'melancholy.mp3',
+				'limbo.mp3',
+				'cheer.mp3',
+				'a-moment-of-clarity.mp3',
+				'lament.mp3',
+				'drowning-in-tranquility.mp3',
+				'i-will-never-change.mp3',
+				'false-hopes.mp3',
+				'marred-marsh.mp3',
+				'screaming-abyss--melody1-1.mp3',
+				'screaming-abyss--melody2-1.mp3',
+				'bass+piano.mp3',
+				'drippydrip.mp3',
+				'house.mp3',
+				'silly-drum-n-flute.mp3',
+			],
+			remakes: [
+				'home-native.mp3',
+				'home-warmth.mp3',
+				'lazerhawk-so-far-away.mp3',
+				'bmsr-just-for-the-night.mp3',
+				'gorillaz-broken.mp3',
+				'porter-robinson-easier-to-love-you.mp3',
+				'jake-kaufman-starlit-wilds.mp3',
+				'qotsa-head-like-a-haunted-house.mp3',
+				'savant-once-upon-a-time.mp3',
+				'tobacco-six-royal-vipers.mp3',
+				'mbr-dma-6-scsi-host-adapter.mp3',
+			],
+			bits: [
+				'5-4-beat.mp3',
+				'7-4-beat.mp3',
+				'showerComposition2.mp3',
+				'drumloopthing.mp3',
+				'highbits2.mp3',
+				'howsmokewithnolighter.mp3',
+				'mtron1.mp3',
+				'procedural1.mp3',
+				'totheend2.mp3',
+				'obrienmustsuffer.mp3',
+			],
+			acapella: [
+				"i'd rather be.mp3",
+				'ijustwannafeelsomething.mp3',
+				'cockroach-king-verse1-bridge.mp3',
+				'lapse.mp3',
+				'haken-puzzlebox.mp3',
+				'puzzlebox.mp3',
+				'becauseitsthere.mp3',
+				'beneath-the-white-rainbow.mp3',
+				'boundbygravity-outro.mp3',
+				'boundbygravity-outro+inst.mp3',
+				'crumblingcastle-layered.mp3',
+				'pareidolia.mp3',
+				'somebody-snip.mp3',
+				'themindseye1.mp3',
+				'themindseye2.mp3',
+				'themindseye-full.mp3',
+				'visions.mp3',
+				'native construct - the spark of the archon.mp3',
+				'nativeconstruct-chromaticaberration-doowop.mp3',
+				'hunnybee.mp3',
+				'jam-growwingsandfly-joeyverse.mp3',
+				'areyoumine.mp3',
+				'blackbird.mp3',
+				'lightshower.mp3',
+				'outtasightouttamind-outro.mp3',
+				'porterrobinson-somethingcomforting.mp3',
+				'strangemanwithbi-coloredsideburnsplayingcharlygarciaintheeighties.mp3',
+				'symptomoflife.mp3',
+				'virtualinsanity.mp3',
+				'whydyouonlycallmewhenyourehigh.mp3',
+				'spidermaaaaaaaaaaaaaaaaaaaaaan.mp3',
+				"thebrain'samotorcycle-ext.mp3",
+			],
+		}
+		function loadPlaylist(btn) {
+			const dir = btn.parentElement.id
+			const playlist = []
+			for (const file of files[dir]) {
+				// playlist.push(`<div>
+				// 	<button onclick="play(this)">▶</button>
+				// 	<span>?:?? / ?:??</span>
+				// 	<input type="range" min="0" max="100" step="1" value="50"></input>
+				// 	<div></div>
+				// 	<audio src="/assets/music/${dir}/${file}" controlslist="noplaybackrate nodownload" preload="metadata"></audio>
+				// </div>`)
+				playlist.push(`<div class="block"><span>${file}</span><audio src="/assets/music/${dir}/${file}" controls controlslist="noplaybackrate nodownload" preload="metadata"></audio></div>`)
+			}
+			btn.parentElement.innerHTML = playlist.join('')
+		}
+		// setTimeout(() => loadPlaylist(document.querySelector('#og button')), 100)
+	</script>
+	<link rel="stylesheet" href="app.css">
+	<style>
+		.playlist {
+			display: grid;
+			align-items: center;
+			justify-items: center;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 1ch;
+		}
+		.playlist > div {
+			width: 100%;
+			text-align: center;
+			font-size: .8em;
+			padding: 1ch 0 00 0 !important;
+		}
+		.playlist > div::before {
+			box-shadow: inset 0 00 1rem -.5ch #493b2a, .5ch .50ch .5rem -.5ch #493b2a !important;
+			filter: url(#paper2) !important
+		}
+		audio {
+			width: 100%;
+			border-radius: 0;
+			height: 20px;
+		}
+		audio::-webkit-media-controls-panel {
+			padding: 0;
+		}
+		audio::-webkit-media-controls-enclosure {
+			border-radius: 0;
+			background-color: transparent;
+			height: 10px;
+			filter: contrast(0) sepia(2) brightness(.3)
+		}
+		audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display {
+			font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+			text-shadow: none;
+		}
+		@-moz-document url-prefix() {
+			audio {
+				background-color: transparent;
+				padding: 0;
+				margin: 0;
+				color: black;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header-inner">
+			<a href="/"><b>A.W.</b></a>
+			|
+			<span class="dropdown">
+				<span>Creation</span>
+				<div class="paper">
+					<a href="/ras.html">Worldbuilding</a>
+					<a href="/games.html">Games</a>
+					<a href="/music.html">Music</a>
+				</div>
+			</span>
+			•
+			<span class="dropdown">
+				<span>Tech</span>
+				<div class="paper">
+					<a href="/experiments.html">Experiments</a>
+				</div>
+			</span>
+			•
+			<span class="dropdown">
+				<span>Thoughts</span>
+				<div class="paper">
+					<a href="/letters.html">Dying thoughts</a>
+				</div>
+			</span>
+		</div>
+	</header>
+	<div class="body-inner">
+		<insert></insert>
+		<div class="block" id="originals"></div>
+		<div class="block" id="covers"></div>
+		<div class="block" id="remakes"></div>
+	</div>
+	<canvas></canvas>
+</body>
+<svg>
+	<filter id="paper">
+		<feTurbulence baseFrequency="0.055" numOctaves="4" seed="10" type="fractalNoise" result="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feTurbulence>
+		<feDisplacementMap scale="30" result="ca53054b-8680-4f7f-ae17-d93ca58bb45d" in="SourceGraphic" in2="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feDisplacementMap>
+	</filter>
+	<filter id="paper2">
+		<feTurbulence baseFrequency="0.055" numOctaves="4" seed="10" type="fractalNoise" result="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feTurbulence>
+		<feDisplacementMap scale="5" result="ca53054b-8680-4f7f-ae17-d93ca58bb45d" in="SourceGraphic" in2="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feDisplacementMap>
+	</filter>
+</svg>
+</html>

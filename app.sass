@@ -29,6 +29,28 @@ h1, h2, h3
 	font-family: 'Special Elite', 'Courier New', Courier, monospace
 body > svg
 	display: none
+button
+	position: relative
+	appearance: none
+	border: none
+	padding: 0
+	margin: 0
+	background: $t
+	color: white
+	font-family: inherit
+	font-size: inherit
+	cursor: pointer
+	&::before
+		content: ''
+		position: absolute
+		inset: -.5ch
+		left: -1ch
+		right: -1ch
+		pointer-events: none
+		z-index: -1
+		background-color: $p2
+		border-radius: 1ch
+		filter: url(#paper2) blur(.5px)
 
 //# Layout
 //? General
@@ -116,6 +138,7 @@ header
 			transition: ease .3s
 			transition-property: clip-path, transform
 			> a
+				display: block
 				white-space: nowrap
 			&::before
 				filter: url(#paper2) blur(.6px)
@@ -125,7 +148,10 @@ header
 				transform: translateY(calc(.3rem - 10px))
 body
 	>canvas
+		position: fixed
+		inset: 0
 		filter: contrast(.8) brightness(.6) saturate(0) sepia(1)
+		pointer-events: none
 	&::before
 		content: ''
 		position: fixed
