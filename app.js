@@ -55,12 +55,12 @@ document.querySelectorAll('insert').forEach(insert => {
 					})
 					break
 				case 'creation.md':
-					document.querySelectorAll('.gallery.drawings, .playlists').forEach(e => {
-						e.parentElement.after(e)
-						const d = document.createElement('div')
-						d.className = 'divider'
-						e.before(d)
-					})
+					// document.querySelectorAll('.gallery.drawings, .playlists').forEach(e => {
+						// e.parentElement.after(e)
+						// const d = document.createElement('div')
+						// d.className = 'divider'
+						// e.before(d)
+					// })
 					break
 			}
 		})
@@ -73,7 +73,7 @@ setTimeout(() => {
 	if (location.href.includes('github'))
 		for (const a of document.querySelectorAll('a'))
 			a.setAttribute('href', '/Afterwords' + a.getAttribute('href'))
-})
+}, 100)
 //# Consts
 const replacements = {
 	'^\\links([^#<>]+?)$': ['\t<p l>$1</p>', 'gm'],
