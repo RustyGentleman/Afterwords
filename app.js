@@ -1,17 +1,33 @@
 //# Generators
-fetch('/')
-	.then(res => {
-		return res.text()
-	})
-	.then(html => {
-		document.querySelector('header').innerHTML = html.match(/<header>([\s\S]*)<\/header>/)[1]
-		setTimeout(() => {
-			document.querySelector('header').querySelectorAll('.dropdown').forEach(dd => {
-				dd.addEventListener('mouseenter', () => dd.classList.add('h'))
-				dd.addEventListener('mouseleave', () => dd.classList.remove('h'))
-			})
-		}, 10)
-	})
+try {
+	fetch('/')
+		.then(res => {
+			return res.text()
+		})
+		.then(html => {
+			document.querySelector('header').innerHTML = html.match(/<header>([\s\S]*)<\/header>/)[1]
+			setTimeout(() => {
+				document.querySelector('header').querySelectorAll('.dropdown').forEach(dd => {
+					dd.addEventListener('mouseenter', () => dd.classList.add('h'))
+					dd.addEventListener('mouseleave', () => dd.classList.remove('h'))
+				})
+			}, 10)
+		})
+} catch (e) {
+	fetch('/Afterwords/')
+		.then(res => {
+			return res.text()
+		})
+		.then(html => {
+			document.querySelector('header').innerHTML = html.match(/<header>([\s\S]*)<\/header>/)[1]
+			setTimeout(() => {
+				document.querySelector('header').querySelectorAll('.dropdown').forEach(dd => {
+					dd.addEventListener('mouseenter', () => dd.classList.add('h'))
+					dd.addEventListener('mouseleave', () => dd.classList.remove('h'))
+				})
+			}, 10)
+		})
+}
 document.querySelectorAll('insert').forEach(insert => {
 	let file = ''
 	if (insert.dataset.file)
