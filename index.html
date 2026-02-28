@@ -16,37 +16,34 @@
 		<div class="header-inner">
 			<a href="/"><b>Afterwords</b></a>
 			|
+			<span><a href="?page=creation">Creation</a></span>
+			•
 			<span class="dropdown">
-				<span><a href="/creation.html">Creation</a></span>
+				<span><a href="?page=tech">Tech</a></span>
 				<div class="paper">
-					<a href="/ras.html">Worldbuilding</a>
-					<a href="/music.html">Music</a>
+					<a href="?page=experiments">Experiments</a>
 				</div>
 			</span>
 			•
 			<span class="dropdown">
-				<span><a href="/tech.html">Tech</a></span>
+				<span><a href="?page=thoughts">Thoughts</a></span>
 				<div class="paper">
-					<a href="/experiments.html">Experiments</a>
-				</div>
-			</span>
-			•
-			<span class="dropdown">
-				<span>Thoughts</span>
-				<div class="paper">
-					<a href="/letters.html">Dying thoughts</a>
+					<a href="?page=letters">Dying thoughts</a>
 				</div>
 			</span>
 		</div>
 	</header>
 	<div class="body-inner">
+		<!-- <div id="logo">
+			<img src="assets/logo.png">
+		</div> -->
 		<insert></insert>
 	</div>
 	<canvas></canvas>
 </body>
 <svg>
 	<filter id="paper">
-		<feTurbulence baseFrequency="0.055" numOctaves="4" seed="10" type="fractalNoise" result="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feTurbulence>
+		<feTurbulence baseFrequency="0.055" numOctaves="4" seed="15" type="fractalNoise" result="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feTurbulence>
 		<feDisplacementMap scale="30" result="ca53054b-8680-4f7f-ae17-d93ca58bb45d" in="SourceGraphic" in2="d42d511e-9bad-4bb2-8442-6e170a0ebef1"></feDisplacementMap>
 	</filter>
 	<filter id="paper2">

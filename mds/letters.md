@@ -71,3 +71,15 @@ I hope you're still alive, somewhere, and I hope you're doing well. If you aren'
 tacYou deserve happy life.
 
 tac>>...Please talk to me.<<
+
+---
+
+## _To my latest beau_
+
+Odds are you'll never read this, but, still, I feel the need to write _something_.
+
+I gave you my all. And you became it, in turn. Now, without you, I have nothing. No one to run to, no one to comfort, or to comfort me. No will to live.
+
+Thinking of you hurts. And yet, my mind keeps turning to you. It desperately wants to have you back, but it's also painfully aware of your decision.
+
+tacSo here I am, stuck in this limbo, biding my time in hopes you'll someday miss me too much, or worry too much, or realize you love me too much, to just... leave.

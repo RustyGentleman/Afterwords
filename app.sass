@@ -27,6 +27,9 @@ a
 	background-color: rgba(17, 17, 17, .5)
 h1, h2, h3
 	font-family: 'Special Elite', 'Courier New', Courier, monospace
+	&:first-child
+		counter-increment: 'h'
+		margin-top: 0 !important
 body > svg
 	display: none
 button
@@ -51,6 +54,8 @@ button
 		background-color: $p2
 		border-radius: 1ch
 		filter: url(#paper2) blur(.5px)
+p:last-of-type
+	margin-bottom: 0
 
 //# Layout
 //? General
@@ -163,3 +168,107 @@ body
 		background: repeating-linear-gradient(to bottom, $t, $t $g1, $c1 $g1, $c1 $g1+2px), repeating-linear-gradient(to right, $t, $t $g1, $c1 $g1, $c1 $g1+2px), repeating-linear-gradient(to bottom, $t, $t $g2, $c2 $g2, $c2 $g2+1px), repeating-linear-gradient(to right, $t, $t $g2, $c2 $g2, $c2 $g2+1px)
 		z-index: -1
 		mix-blend-mode: multiply
+.spoiler
+	background: $cc
+	border-radius: 3px
+	transition: background ease .3s
+	&:hover, &:focus
+		background: $p2
+
+//# Specific elements and things
+div[data-inserted="home.md"]
+	> div.block:nth-of-type(1)
+		h1, p
+			margin: 0
+	> div.block:nth-of-type(3)
+		padding: 15px !important
+		margin-inline: auto
+		width: fit-content
+		&::before
+			border-radius: 5ch
+		small ul
+			padding-inline: 20px 10px
+			margin-bottom: 0
+		p
+			margin-block: .25ch
+#logo
+	position: relative
+	display: block
+	margin-inline: auto
+	height: 35vh
+	width: fit-content
+	&::before
+		position: absolute
+		inset: 0
+		content: ''
+		pointer-events: none
+		background: url('assets/logo.png') no-repeat, url('/Afterwords/assets/logo.png') no-repeat
+		background-size: auto 100%, auto 100%
+		filter: sepia(1) saturate(2) hue-rotate(-50deg) blur(2ch) url(#paper)
+	img
+		height: 100%
+		width: auto
+		filter: brightness(.03) sepia(1)
+
+
+//? Creation
+.gallery.drawings
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	overflow: visible
+	&.active
+		aspect-ratio: .5
+		width: 100%
+		height: auto
+	img
+		--x: 0
+		--y: 0
+		--ox: 0
+		--oy: 0
+		--r: 0
+		position: absolute
+		max-width: 20rem
+		max-height: 20rem
+		width: auto
+		height: auto
+		transform: translate(calc(var(--x) * min(.6vw, 6px) + var(--ox) * 1px), calc(var(--y) * min(.6vw, 6px) + var(--oy) * 1px)) rotate(calc(var(--r) * 1deg))
+		transform-origin: calc(-1% * var(--x)) calc(-1% * var(--y))
+		box-shadow: .2rem .20rem .5rem .1rem rgba(0, 0, 00, .5)
+		cursor: grab
+//? Music
+.playlist
+	display: grid
+	align-items: center
+	justify-items: center
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	gap: 1ch
+	> div
+		width: 100%
+		text-align: center
+		font-size: .8em
+		padding: 1ch 0 00 0 !important
+	> div::before
+		box-shadow: inset 0 00 1rem -.5ch #493b2a, .5ch .50ch .5rem -.5ch #493b2a !important
+		filter: url(#paper2) !important
+audio
+	width: 100%
+	border-radius: 0
+	height: 20px
+	&::-webkit-media-controls-panel
+		padding: 0
+	&::-webkit-media-controls-enclosure
+		border-radius: 0
+		background-color: transparent
+		height: 10px
+		filter: contrast(0) sepia(2) brightness(.3)
+	&::-webkit-media-controls-current-time-display, &::-webkit-media-controls-time-remaining-display
+		font-family: 'Courier Prime', 'Courier New', Courier, monospace
+		text-shadow: none
+@-moz-document url-prefix()
+	audio
+		background-color: transparent
+		padding: 0
+		margin: 0
+		color: black

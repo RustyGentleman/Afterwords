@@ -34,6 +34,10 @@ a {
 h1, h2, h3 {
   font-family: "Special Elite", "Courier New", Courier, monospace;
 }
+h1:first-child, h2:first-child, h3:first-child {
+  counter-increment: "h";
+  margin-top: 0 !important;
+}
 
 body > svg {
   display: none;
@@ -62,6 +66,10 @@ button::before {
   background-color: #493b2a;
   border-radius: 1ch;
   filter: url(#paper2) blur(0.5px);
+}
+
+p:last-of-type {
+  margin-bottom: 0;
 }
 
 .header-inner, .body-inner {
@@ -191,4 +199,129 @@ body::before {
   background: repeating-linear-gradient(to bottom, transparent, transparent 4px, rgba(100, 100, 100, 0.2) 4px, rgba(100, 100, 100, 0.2) 6px), repeating-linear-gradient(to right, transparent, transparent 4px, rgba(100, 100, 100, 0.2) 4px, rgba(100, 100, 100, 0.2) 6px), repeating-linear-gradient(to bottom, transparent, transparent 12px, rgba(100, 100, 100, 0.15) 12px, rgba(100, 100, 100, 0.15) 13px), repeating-linear-gradient(to right, transparent, transparent 12px, rgba(100, 100, 100, 0.15) 12px, rgba(100, 100, 100, 0.15) 13px);
   z-index: -1;
   mix-blend-mode: multiply;
+}
+
+.spoiler {
+  background: currentColor;
+  border-radius: 3px;
+  transition: background ease 0.3s;
+}
+.spoiler:hover, .spoiler:focus {
+  background: #493b2a;
+}
+
+div[data-inserted="home.md"] > div.block:nth-of-type(1) h1, div[data-inserted="home.md"] > div.block:nth-of-type(1) p {
+  margin: 0;
+}
+div[data-inserted="home.md"] > div.block:nth-of-type(3) {
+  padding: 15px !important;
+  margin-inline: auto;
+  width: fit-content;
+}
+div[data-inserted="home.md"] > div.block:nth-of-type(3)::before {
+  border-radius: 5ch;
+}
+div[data-inserted="home.md"] > div.block:nth-of-type(3) small ul {
+  padding-inline: 20px 10px;
+  margin-bottom: 0;
+}
+div[data-inserted="home.md"] > div.block:nth-of-type(3) p {
+  margin-block: 0.25ch;
+}
+
+#logo {
+  position: relative;
+  display: block;
+  margin-inline: auto;
+  height: 35vh;
+  width: fit-content;
+}
+#logo::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: url("assets/logo.png") no-repeat, url("/Afterwords/assets/logo.png") no-repeat;
+  background-size: auto 100%, auto 100%;
+  filter: sepia(1) saturate(2) hue-rotate(-50deg) blur(2ch) url(#paper);
+}
+#logo img {
+  height: 100%;
+  width: auto;
+  filter: brightness(0.03) sepia(1);
+}
+
+.gallery.drawings {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+.gallery.drawings.active {
+  aspect-ratio: 0.5;
+  width: 100%;
+  height: auto;
+}
+.gallery.drawings img {
+  --x: 0;
+  --y: 0;
+  --ox: 0;
+  --oy: 0;
+  --r: 0;
+  position: absolute;
+  max-width: 20rem;
+  max-height: 20rem;
+  width: auto;
+  height: auto;
+  transform: translate(calc(var(--x) * min(0.6vw, 6px) + var(--ox) * 1px), calc(var(--y) * min(0.6vw, 6px) + var(--oy) * 1px)) rotate(calc(var(--r) * 1deg));
+  transform-origin: calc(-1% * var(--x)) calc(-1% * var(--y));
+  box-shadow: 0.2rem 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+  cursor: grab;
+}
+
+.playlist {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1ch;
+}
+.playlist > div {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 1ch 0 0 0 !important;
+}
+.playlist > div::before {
+  box-shadow: inset 0 0 1rem -0.5ch #493b2a, 0.5ch 0.5ch 0.5rem -0.5ch #493b2a !important;
+  filter: url(#paper2) !important;
+}
+
+audio {
+  width: 100%;
+  border-radius: 0;
+  height: 20px;
+}
+audio::-webkit-media-controls-panel {
+  padding: 0;
+}
+audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
+  background-color: transparent;
+  height: 10px;
+  filter: contrast(0) sepia(2) brightness(0.3);
+}
+audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display {
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  text-shadow: none;
+}
+
+@-moz-document url-prefix() {
+  audio {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    color: black;
+  }
 }/*# sourceMappingURL=app.css.map */
