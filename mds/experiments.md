@@ -11,13 +11,13 @@ So, I have here a few experiments, mostly in remaking things that already existe
 		display: block;
 		margin: 1lh auto;
 		height: 10lh;
-		filter: brightness(0) contrast(.5) sepia(1);
+		filter: brightness(0) contrast(.9) sepia(1);
 	}
 	#pl {
 		height: auto;
 		width: 80%;
 		margin-block: -2lh -3lh;
-		filter: contrast(1) sepia(.3);
+		filter: contrast(0.9) brightness(0.6) sepia(1);
 	}
 </style>
 
@@ -49,7 +49,7 @@ It was a fair bit of effort, and though no longer maintained, I was glad I made 
 
 ## TinyRPG (2022)
 
-A short-lived attempt at making a very small and simple web-based RPG. It quickly turned, rather, into an exploration in noise-based procedural map generation - this was after <a href="?page=creation">Innerspace</a>.
+A short-lived attempt at making a very small and simple web-based RPG. It quickly turned, rather, into an exploration in noise-based procedural map generation - this was after <a href="?show=creation">Innerspace</a>.
 
 ---
 

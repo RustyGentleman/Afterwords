@@ -11,7 +11,7 @@ Not just a worldbuilding and writing project, but an entire world I've built ins
 		display: block;
 		height: 20rem;
 		margin: 1lh auto;
-		filter: contrast(0) sepia(1) brightness(.4)
+		filter: contrast(0) sepia(1) brightness(.1)
 	}
 </style>
 

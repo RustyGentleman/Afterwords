@@ -1,27 +1,14 @@
-//# Generators
-fetch(location.origin + location.pathname)
-	.then(res => {
-		return res.text()
-	})
-	.then(html => {
-		document.querySelector('header').innerHTML = html.match(/<header>([\s\S]*)<\/header>/)[1]
-		setTimeout(() => {
-			document.querySelector('header').querySelectorAll('.dropdown').forEach(dd => {
-				dd.addEventListener('mouseenter', () => dd.classList.add('h'))
-				dd.addEventListener('mouseleave', () => dd.classList.remove('h'))
-			})
-		}, 10)
-	})
-load()
+// window.addEventListener('load', () => {
+// 	const p = new URLSearchParams(location.search)
+// 	if (!p.get('show')) return;
 
-// //# Link fixer
-// setTimeout(() => {
-// 	if (location.href.includes('github'))
-// 		for (const a of document.querySelectorAll('a'))
-// 			a.setAttribute('href', '/Afterwords' + a.getAttribute('href'))
-// }, 100)
+// 	show(p.get('show'))
+// })
+
 //# Consts
 const replacements = {
+	// '((?:>[\\t ][\\S ]+\\n|>[\\n])+)': ['<blockquote>$1</blockquote>', 'g'],
+	'^ +-(.*?)$': ['&nbsp;&nbsp;-$1', 'gm'],
 	'^\\links([^#<>]+?)$': ['\t<p l>$1</p>', 'gm'],
 	//? Markers
 	'\\n---\\n': ['</div><div class="divider"></div><div class="block">', 'g'],
@@ -39,10 +26,10 @@ const replacements = {
 	'## (.*)': ['<h2>$1</h2>', 'gm'],
 	'# (.*)': ['<h1>$1</h1>', 'gm'],
 	//? Lists
-	'^- (.*)$': ['\t<li>$1</li>', 'gm'],
-	'((\\t?<li>.*<\\/li>\\s{2})+)': ['<ul>\n$1</ul>\n', 'g'],
-	//? Block quotes
-	'^> (.*)': ['\t<blockquote>$1</blockquote>', 'gm'],
+	// '^  - (.*)$': ['\t<li>$1</li>', 'gm'],
+	// '((\\t?<li>.*<\\/li>\\s{2})+)': ['<ul>\n$1</ul>\n', 'g'],
+	// '^- (.*)$': ['\t<li>$1</li>', 'gm'],
+	// '((\\t?<li>.*<\\/li>\\s{2})+)': ['<ul>\n$1</ul>\n', 'g'],
 	//? Text styling
 	'\\*\\*(.*?)\\*\\*': ['<b>$1</b>', 'g'],
 	'__(.*?)__': ['<u>$1</u>', 'g'],
@@ -77,45 +64,36 @@ function renderMD(text) {
 		.replaceAll('\\\\n', '<br>')
 	return rendered
 }
-async function load() {
-	const page = new URLSearchParams(location.search).get('page')
-	document.querySelector('.body-inner').innerHTML = `<insert data-file="${page?? 'home'}.md"></insert>`
+function show(file) {
+	const path = location.origin.includes('github')? `Afterwords/mds/${file}.md` : `mds/${file}.md`
 
-	await new Promise(r => setTimeout(r, 1))
-
-	document.querySelectorAll('insert').forEach(insert => {
-		const page = new URLSearchParams(location.search).get('page')
-		let file = insert.dataset.file?? (page? page+'.md' : 'home.md')
-
-		let prefix = ''
-		if (location.href.includes('github'))
-			prefix = '/Afterwords'
-
-		fetch(prefix + '/mds/' + file)
-			.then(res => {
-				if (!res.ok) throw new Error("Failed to load markdown")
-				return res.text()
+	fetch(path)
+		.then(res => {
+			if (!res.ok) throw new Error("Markdown not found")
+			return res.text()
+		})
+		.then(md => {
+			const rendered = renderMD(md)
+			const show = document.getElementById('show')
+			show.innerHTML = `<div id="show-inner"><button id="close" onclick="this.parentElement.outerHTML = ''">X</button><div class="block">${rendered}</div></div>`
+		})
+		.then(() => {
+			const el = document.getElementById('show')
+			el.querySelectorAll('script').forEach(s => {
+				eval(s.innerHTML)
 			})
-			.then(md => {
-				const rendered = renderMD(md)
-				insert.outerHTML = `<div data-inserted="${file}"><div class="block">${rendered}</div></div>`
-				switch (file) {
-					case 'ras.md':
-						document.querySelectorAll('h1 + p:not(:has(:not(a)))').forEach(e => {
-							e.outerHTML = `<p l tac>${e.innerHTML}</p>`
-						})
-						break
-				}
-			})
-			.then(() => {
-				document.querySelector('body .body-inner').querySelectorAll('script').forEach(s => {
-					eval(s.innerHTML)
-				})
-			})
-			.catch(err => {
-				console.error(err)
-			})
-	})
+			el.querySelectorAll('a').forEach(a => a.addEventListener('click', (e) => {
+				if (!a.getAttribute(`href`).startsWith('?show=')) return;
+				e.preventDefault()
+				el.querySelector('#close').click()
+				setTimeout(() => {
+					show(a.getAttribute(`href`).slice(6))
+				}, 100)
+			}))
+		})
+		.catch(err => {
+			console.error(err)
+		})
 }
 //# Page codes
 function loadGallery() {
