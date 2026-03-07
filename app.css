@@ -100,13 +100,13 @@ body {
   position: absolute;
 }
 #table .scroll.s1 {
-  background: url("assets/scroll1.png") no-repeat center, url("Afterwords/assets/scroll1.png") no-repeat center;
+  background: url("assets/scroll1.png") no-repeat center;
 }
 #table .scroll.s2 {
-  background: url("assets/scroll2.png") no-repeat center, url("Afterwords/assets/scroll2.png") no-repeat center;
+  background: url("assets/scroll2.png") no-repeat center;
 }
 #table .scroll.s3 {
-  background: url("assets/scroll3.png") no-repeat center, url("Afterwords/assets/scroll3.png") no-repeat center;
+  background: url("assets/scroll3.png") no-repeat center;
 }
 #table .scroll {
   background-size: 100% auto !important;
@@ -239,7 +239,7 @@ body::before, body::after {
 }
 body::before {
   z-index: -2;
-  background: url("assets/wood.png") repeat center center, url("Afterwords/assets/wood.png") repeat center center;
+  background: url("assets/wood.png") repeat center center;
 }
 body::after {
   position: absolute;
@@ -312,7 +312,7 @@ blockquote {
   inset: 0;
   content: "";
   pointer-events: none;
-  background: url("assets/logo.png") no-repeat, url("/Afterwords/assets/logo.png") no-repeat;
+  background: url("assets/logo.png") no-repeat;
   background-size: auto 100%, auto 100%;
   filter: sepia(1) saturate(5) brightness(0.5) hue-rotate(-30deg) blur(0.7em) url(#paper);
 }

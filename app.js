@@ -65,7 +65,7 @@ function renderMD(text) {
 	return rendered
 }
 function show(file) {
-	const path = location.origin.includes('github')? `Afterwords/mds/${file}.md` : `mds/${file}.md`
+	const path = `mds/${file}.md`
 
 	fetch(path)
 		.then(res => {
