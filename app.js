@@ -40,7 +40,7 @@ const replacements = {
 	'\\|\\|(.*?)\\|\\|': ['<span tabindex="0" class="spoiler">$1</span>', 'g'],
 	//? Paragraphs
 	'^\\ntac(.+?)$': ['\t<p tac>$1</p>', 'gm'],
-	'^\\n([^#<>]+?)$': ['\t<p>$1</p>', 'gm'],
+	'^\\n([^#<].+?)$': ['\t<p>$1</p>', 'gm'],
 	// '': ['', 'g'],
 }
 //# Helpers
@@ -93,6 +93,18 @@ function show(file) {
 		})
 		.catch(err => {
 			console.error(err)
+		})
+}
+function showpage(page) {
+	fetch(page+'.html')
+		.then(res => {
+			if (!res.ok) throw new Error("Page not found")
+				return res.text()
+		})
+		.then(html => {
+			const body = html.match(/<body>([\s\S]*)<\/body>/)?.at(1)
+			const show = document.getElementById('show')
+			show.innerHTML = `<div id="show-inner"><button id="close" onclick="this.parentElement.outerHTML = ''">X</button>${body}</div>`
 		})
 }
 //# Page codes

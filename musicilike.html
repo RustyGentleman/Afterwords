@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Music I Like - Afterwords</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-color: #000;
+			font-family: "Courier Prime", "Courier New", Courier, monospace;
+			overflow-x: hidden;
+		}
+	</style>
+</head>
+<body>
+	<style>
+		@keyframes flip {
+			0% {
+				transform: translateZ(0) rotate(var(--r)) rotateY(0deg);
+			}
+			50% {
+				transform: translateZ(10em) rotate(var(--r)) rotateY(90deg);
+			}
+			100% {
+				transform: translateZ(0) rotate(var(--r)) rotateY(180deg);
+			}
+		}
+		#board {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 1lh;
+			padding: 3lh;
+			perspective: 60rem;
+		}
+		.polaroid {
+			--r: -5deg;
+			position: relative;
+			aspect-ratio: 560/350 !important;
+			width: 100%;
+			height: auto;
+			background-color: #d3d6da;
+			box-shadow: inset 0 00 3rem .7rem rgba(0 0 00 / .3), inset 0 00 1rem rgba(0 0 00 / .3);
+			font-size: .8em;
+			animation-play-state: paused;
+			text-align: center;
+			transform: rotate(var(--r));
+		}
+		.polaroid.flip {
+			animation: flip .5s linear 1 reverse forwards;
+		}
+		.polaroid.flip .back {
+			transform: rotateY(180deg);
+		}
+		.polaroid.flipped {
+			animation-direction: normal;
+		}
+		.polaroid .back, .polaroid .front {
+			padding: 1lh;
+			padding-bottom: 3lh;
+			transition: opacity .5s cubic-bezier(0, -10, 1, 10);
+		}
+		.polaroid .back {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.polaroid .back.sqz {
+			 font-size:.8em;padding:.5em;padding-bottom:1em;
+		}
+		.polaroid .front, .polaroid.flipped .back {
+			opacity: 1;
+			pointer-events: all;
+		}
+		.polaroid.flipped .front, .polaroid .back {
+			opacity: 0;
+			pointer-events: none;
+		}
+		iframe {
+			aspect-ratio: 560/315 !important;
+			width: 100%;
+			height: auto;
+		}
+		.polaroid button {
+			position: absolute;
+			bottom: .5lh;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	</style>
+	<div id="board">
+		<div class="polaroid" style="--r: 3deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GZlVT8gPGEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				KNOWER - Crash the Car
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>
+					This is one of two songs I listened to a fair bit while thinking of ending my life. There's something very cathartic and beautiful about the chorus; <i>'Burning in yellow glow, floor it and don't let go / Crash the car'...</i>
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Nv83lZfp7Zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Louis Cole - These Dreams are Killing Me
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>This is the second song I listened to a fair bit while thinking of ending my life. Something about the way it sounds optimistic and upbeat, while the lyrics are just... yeah. It feels bittersweet. It feels like resignation under a situation you wish were different.</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: -2deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/q-74HTjRbuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Porter Robinson - Musician
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back sqz">
+				<div>
+					Porter Robinson was always an important artist to me, with the subjects he often covers and his artistic sensibilities; I loved glitch art and other forms of artistic digital artifacting.
+					<br><br>
+					As a creative person, this song in particular struck a chord with me; dealing with burnout, or a block, was always frustrating. But a parallel can also be drawn to chronic depression, its ups and downs, anhedonia, and how it fucks with your ability and drive to <i>do things</i>...
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: 2deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fJ4dKnu2IvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Porter Robinson - Easier to Love You
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>
+					This song is a punch to the gut. It made me wonder what my younger self would think of me; if it'd forgive me for not having been able to take better care of myself. 
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: 6deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/t0lbJRmlXW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Covet - Parrot
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back sqz">
+				<div>
+					Ras Silverleaf's theme song; it just feels incredibly fitting. In my mind this song is a wordless story about life's up and downs, with passages describing feeling stuck with the weight of depression, and others explaining that <b>it'll be okay</b>... and that, as long as you live, you can still experience things, even if you're not always happy.
+					<br><br>
+					Also, I love this woman very much. Platonically.
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: -3deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xggedj1wzyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Unknown Mortal Orchestra - Meshuggah
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>
+					Ruban is a pretty unique artist, and I appreciate what he puts himself through in order to make his music. Some of it social commentary, some about more specific things. I love that he made a song for his daughter.
+					<br><br>
+					But this one... this one's just nice.
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: 4deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_PkzsMak6P8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Sky Sailing - Brielle
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>
+					I've spent so many days daydreaming to Adam's music, both from Owl City and Sky Sailing. I adore the sense of innocence and adventure his songs have about them. But if you know me well, you'll know I... really wanted to have a daughter, and name her Brielle.
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: -3deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fzQ6gRAEoy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Porter Robinson & Madeon - Shelter
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back sqz">
+				<div>
+					At the time, an unexpected collaboration between two artists I liked, and an expansion of sorts on the story behind Sad Machine. The story the video tells is... quite sad, and the sentiment in the lyrics quite beautiful.
+					<br><br>
+					Frankly, it's not absurd to consider this, along with Sad Machine, might've played a hand in furthering my interest for writing.
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: 2deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dPO2lz7vICY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Black Moth Super Rainbow - Old Yes
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back sqz">
+				<div>
+					I remember absolutely falling in love with this song, and being so sad that it was incomplete. I remember listening to it for the first time - I still didn't know this duo/band very well - and it just... stopped me in my tracks. <i>'And I just wanna be myself again'</i>... The deep, aching nostalgia and melancholy in that line is... something.
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: -6deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FhXGhIq3sfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Black Moth Super Rainbow - Just for the Night
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>
+					This is one of the songs I tend to come back to when depression is stomping my head into the curb. It's like a location-specific acquaintance you only go to when you're feeling this particular emotion, and they know it exactly, every time. And you just... exist, with them, in silent understanding and commiseration.
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: 2deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bZ6b5ghZZN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Black Moth Super Rainbow - I think it is beautiful that you are 589 colors too
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>
+					This song has a similar sentiment as Old Yes, to me, but it's a song I come back to much more often. <i>'I don't want to live through winter'</i>...
+					<br><br>
+					I don't either.
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: 4deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FTUMKjeQjfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				Satanstompingcaterpillars/Black Moth Super Rainbow - Birdsnestmakesapattern
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>
+					This whole album (The Autumn Kaleidoscope Got Changed) is... a great soundtrack to just exist to. When you can't fight anymore, and you <i>have</i> to just... lay down and exist.
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+		<div class="polaroid" style="--r: -2deg">
+			<div class="front">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9j0OWlCdo0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				King Gizzard & the Lizard Wizard - Superposition
+				<button onclick="this.parentElement.parentElement.classList.add('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+			<div class="back">
+				<div>
+					A surprising thing to hear in the album, it's... only not among my favorite King Gizz songs because there are so many. But I love how it sounds, how it feels, and the lyrics are so well written. <i>'Trace your finger from birth to hearse'</i>...
+				</div>
+				<button onclick="this.parentElement.parentElement.classList.remove('flipped');this.parentElement.parentElement.classList.add('flip');setTimeout(() => this.parentElement.parentElement.classList.remove('flip'),500)">-></button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

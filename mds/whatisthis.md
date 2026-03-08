@@ -8,4 +8,10 @@ tacSo here it is:
 
 tac_I hereby pronounce myself, in some way, deceased. Fuck you._
 
-In a much bigger part, however, this is meant to be a posthumously developed archive of much that had, in life, kept me from leaving it. Creative projects, musings, ideas; little pieces of my consciousness that I'd like to leave here. To imprint upon you. Yes, my hope is that, in some way, a part of me will still be alive in the minds of you, both singular and plural.
+In a much bigger part, however, this is meant to be a posthumously developed archive of much that had, in life, kept me from leaving it. Creative projects, musings, ideas; little pieces of my consciousness that I'd like to leave here. A legacy, if you will.
+
+I ask that you consider carrying some of it, of _me_, within you, in some way. Be it my passion for creation, the worlds and things I've written and created, or even a thought I might share, here or elsewhere.
+
+tacDelay my second death...
+
+tacRemember me.

@@ -1,4 +1,4 @@
-# Music
+# Songs and Recordings
 
 A collection of original songs, acapella covers, by-ear/from-memory remakes of songs, and other snippets of bullshit I've accumulated. Some of them I'm quite proud, some are just snippets of ideas that I never quite got to finishing, and others are just, again, snippets of bullshit.
 
