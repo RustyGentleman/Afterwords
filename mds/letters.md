@@ -24,7 +24,7 @@ You must've known me at least somewhat; probably seen some of... _this_, even if
 
 These are, I believe, where I begin to let myself just _be_. A still somewhat curated version of me; limited in scope, but still very real. Perhaps we shared a few interests. Perhaps you were just... nice to me, in a way that I appreciate. But whatever the case, know this: there's a small window on the walls of my mind shaped just for you to look through.
 
-I hope you still enjoy the things you did, and are still doing the things you were. You're probably depressed, or some other flavor of broken - a kind of kinship we likely felt. Whatever it was, I hope you're bettter now. If you are, fuck you. And if you aren't, I'm sorry I'm no longer here to offer some well-placed insights and pointers. Please make the best of what you have and what you are, mm?
+I hope you still enjoy the things you did, and are still doing the things you were. You're probably depressed, or some other flavor of broken - a kind of kinship we likely felt. Whatever it was, I hope you're better now. If you are, fuck you. And if you aren't, I'm sorry I'm no longer here to offer some well-placed insights and pointers. Please make the best of what you have and what you are, mm?
 
 ---
 
@@ -56,9 +56,19 @@ tac>>And fuck you.<<
 
 # __A request for privacy__
 
-If by this point you're no longer sure if I might address you specifically, I ask that you leave this here. I understand that you may be curious, and if you're terribly so, it's okay, I won't resent you - I can't, I won't know; but I wouldn't if I did. It's only that the _nature_ of the following letters is a good deal more personal, so I feel I should ask you to consider whether I'd mind you reading them. Unless you don't know me - then I doln't quite care, I suppose.
+If by this point you're no longer sure if I might address you specifically, I ask that you leave this here. I understand that you may be curious, and if you're terribly so, it's okay, I won't resent you - I can't, I won't know; but I wouldn't if I did. It's only that the _nature_ of the following letters is a good deal more personal, so I feel I should ask you to consider whether I'd mind you reading them. Unless you don't know me - then I don't quite care, I suppose.
 
 tacYou may err on the side of curiosity. I trust your judgement.
+
+---
+
+## _To those sublime_
+
+I thank you, as a group, for embracing me when I had no one to run to. I'm sad to assure you I likely would've departed much earlier, were it not for your acceptance and kindness. I wish I'd fit better and more seamlessly with everyone.
+
+To those I had actually connected with, I doubly thank you for the moments of laughter and jokes, _and_ the moments of comfortable silence alike, much like the great many photos that came from them, which I'm sure lies in some sort of treasury in my left-behind hard drive.
+
+To _the mustelid_... I'm genuinely, deeply sorry for the stress and distress I must've caused you, in both small and big ways. I beg that you may forgive me, and, somewhere in your mind, still remember me as mere cat, playful and well-meaning, who once adored being in a bag. Or whatever positive version of the me you knew might be.
 
 ---
 
@@ -70,16 +80,14 @@ I hope you're still alive, somewhere, and I hope you're doing well. If you aren'
 
 tacYou deserve happy life.
 
-tac>>...Please talk to me.<<
+tac>>...Please be okay.<<
 
 ---
 
-## _To my latest beau_
+## _To my imzadi_
 
 Odds are you'll never read this, but, still, I feel the need to write _something_.
 
 I gave you my all. And you became it, in turn. Now, without you, I have nothing. No one to run to, no one to comfort, or to comfort me. No will to live.
 
-Thinking of you hurts. And yet, my mind keeps turning to you. It desperately wants to have you back, but it's also painfully aware of your decision.
-
-tacSo here I am, stuck in this limbo, biding my time in hopes you'll someday miss me too much, or worry too much, or realize you love me too much, to just... leave.
+Thinking of you hurts. And yet, my mind keeps turning to you. It desperately wants to have you back, but it's also p̵a̸i̶n̶f̷u̵l̴l̸y̴ á̷̤w̵̍ͅa̸̖͗r̸̝̈́e̶̮͗ ̷͔͆o̶̥̒f̸̨͂ ẙ̵̡͇̖̬͖̩̐̒̌͒̄ö̵̰͇͎̹̰̜̫ͅú̸̥̊̊̕͘͝ŕ̸̭̪̜̹̳̟̠̥͑͜ ̶͈̏d̸̫̣̞̞̜̿̐͌e̶̮̣̳͕͐c̸̬̖͖̥̹̔́í̶͎͇̀̀̎̑̈̕͜ș̵̨̛͕̞̗̼̖̑͌̎̈̇́̀͝ḯ̵̛̛͍̼͙̈̒̄ǫ̷̜̻̏̒͌̂n̸͈̹͍͒́͂̈̓͘͝͠.EOF
