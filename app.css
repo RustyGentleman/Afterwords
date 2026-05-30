@@ -279,9 +279,9 @@ body::after {
 #table .block:last-child::before {
   transform: rotate(3deg);
   inset: -0.5em;
-  bottom: -1em;
+  bottom: -1.3em;
   left: -1em;
-  border-radius: 35%;
+  border-radius: 40%;
 }
 #table #gb {
   display: block;
@@ -340,6 +340,10 @@ blockquote {
   height: 100%;
   width: auto;
   filter: brightness(0.01) sepia(1);
+}
+
+[data-inserted="home2.md"] h1 {
+  margin-bottom: 0.3em;
 }
 
 .gallery.drawings {

@@ -64,11 +64,13 @@ tacYou may err on the side of curiosity. I trust your judgement.
 
 ## _To those sublime_
 
-I thank you, as a group, for embracing me when I had no one to run to. I'm sad to assure you I likely would've departed much earlier, were it not for your acceptance and kindness. I wish I'd fit better and more seamlessly with everyone.
+I thank you, as a group, for embracing me when I had no one to run to. I'm sad to assure you I likely would've departed much earlier, were it not for your acceptance and kindness. I wish I'd fitted better and more seamlessly with all of you.
 
 To those I had actually connected with, I doubly thank you for the moments of laughter and jokes, _and_ the moments of comfortable silence alike, much like the great many photos that came from them, which I'm sure lies in some sort of treasury in my left-behind hard drive.
 
 To _the mustelid_... I'm genuinely, deeply sorry for the stress and distress I must've caused you, in both small and big ways. I beg that you may forgive me, and, somewhere in your mind, still remember me as mere cat, playful and well-meaning, who once adored being in a bag. Or whatever positive version of the me you knew might be.
+
+To _the winged one_... You may have found it frivolous and _pretentious_, the way I spoke of you and your art. But I meant what I said. There's **great value** in creation, and I hope you can someday see that, to some degree. Please, keep creating things, and share them with others.
 
 ---
 
@@ -84,10 +86,10 @@ tac>>...Please be okay.<<
 
 ---
 
-## _To my imzadi_
+## _To my lover of seven years_
 
 Odds are you'll never read this, but, still, I feel the need to write _something_.
 
-I gave you my all. And you became it, in turn. Now, without you, I have nothing. No one to run to, no one to comfort, or to comfort me. No will to live.
+I gave you my all. And you became it, in turn. However, I cannot say that my loss of you was the sole reason for my departure. I'd felt, even in the years leading up to our schism, that I was running out of fight; perhaps for longer than I thought.
 
-Thinking of you hurts. And yet, my mind keeps turning to you. It desperately wants to have you back, but it's also p̵a̸i̶n̶f̷u̵l̴l̸y̴ á̷̤w̵̍ͅa̸̖͗r̸̝̈́e̶̮͗ ̷͔͆o̶̥̒f̸̨͂ ẙ̵̡͇̖̬͖̩̐̒̌͒̄ö̵̰͇͎̹̰̜̫ͅú̸̥̊̊̕͘͝ŕ̸̭̪̜̹̳̟̠̥͑͜ ̶͈̏d̸̫̣̞̞̜̿̐͌e̶̮̣̳͕͐c̸̬̖͖̥̹̔́í̶͎͇̀̀̎̑̈̕͜ș̵̨̛͕̞̗̼̖̑͌̎̈̇́̀͝ḯ̵̛̛͍̼͙̈̒̄ǫ̷̜̻̏̒͌̂n̸͈̹͍͒́͂̈̓͘͝͠.EOF
+The life I had with you was the most wonderful thing that happened to me. I was, am, and will, for as long as I have the capacity to, be happy that I had you, and that I was yours... even as the mere thought of you hurts.
