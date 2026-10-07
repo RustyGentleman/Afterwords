@@ -74,6 +74,16 @@ To _the winged one_... You may have found it frivolous and _pretentious_, the wa
 
 ---
 
+## _To the drunk cats on the roof_
+
+tacThe colonist, the colonizer, and the convict.
+
+I won't lie, initially I'd thought you would only be drinking buddies to me. Something I'd never had before, to be fair, but still, only that. That quickly came not to be the case, however. The three of you, and those around you, had grown to be the company I looked forward to, week after week. I wish I could've been with you all for longer.
+
+I hope you will remember me.
+
+---
+
 ## _To a certain spring boy_
 
 You're probably the one I think of the most. **You were an angel** to me. And I can't help but feel as though I've failed you, having lost contact with you so many times. Did you know I looked into hiring a private investigator to look for you? That's how I learned there are many ways to write your name.
