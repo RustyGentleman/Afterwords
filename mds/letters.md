@@ -90,7 +90,7 @@ You're probably the one I think of the most. **You were an angel** to me. And I 
 
 I hope you're still alive, somewhere, and I hope you're doing well. If you aren't, I hope you'll think of me every now and then and feel a warmth welling up in your chest. I hope you're still doing art, and still being your adorable self.
 
-tacYou deserve happy life.
+tacYou deserve a happy life.
 
 tac>>...Please be okay.<<
 
@@ -103,3 +103,5 @@ Odds are you'll never read this, but, still, I feel the need to write _something
 I gave you my all. And you became it, in turn. However, I cannot say that my loss of you was the sole reason for my departure. I'd felt, even in the years leading up to our schism, that I was running out of fight; perhaps for longer than I thought.
 
 The life I had with you was the most wonderful thing that happened to me. I was, am, and will, for as long as I have the capacity to, be happy that I had you, and that I was yours... even as the mere thought of you hurts.
+
+I hope you'll be okay, and have a good life.
