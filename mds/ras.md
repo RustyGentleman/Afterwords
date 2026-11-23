@@ -65,3 +65,5 @@ This world I speak of is one of many that exist within a cosmological deity of s
 # The Scar
 
 Whatever has caused the scar was perhaps some cosmic event, 
+
+tac[ERR:EOF]

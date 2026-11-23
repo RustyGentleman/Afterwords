@@ -113,10 +113,13 @@ body {
   text-shadow: none;
 }
 #table .scroll.ar a {
-  text-align: end;
+  text-align: right;
 }
 #table .scroll.ac a {
   text-align: center;
+}
+#table .scroll.al a {
+  text-align: left;
 }
 #table .scroll a {
   display: block;

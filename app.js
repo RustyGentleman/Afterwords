@@ -1,9 +1,13 @@
-// window.addEventListener('load', () => {
-// 	const p = new URLSearchParams(location.search)
-// 	if (!p.get('show')) return;
-
-// 	show(p.get('show'))
-// })
+window.addEventListener('load', () => {
+	const p = new URLSearchParams(location.search)
+	if (p.get('show'))
+		show(p.get('show'))
+	const eshow = document.querySelector('#show')
+	eshow.addEventListener('click', e => {
+		if (e.target === eshow)
+			eshow.innerHTML = ''
+	})
+})
 
 //# Consts
 const replacements = {
